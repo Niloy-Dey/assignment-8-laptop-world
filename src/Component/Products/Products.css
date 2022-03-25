@@ -29,3 +29,34 @@
         gap:10px;
     }    
 }
+.cart-container{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    height: 500px;
+
+}
+.cart-container button{
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.first-btn{
+    color: green;
+    border: 2px solid green;
+}
+.second-btn{
+    color: red;
+    border: 1px solid red;
+}
+
+.full-container{
+    display: grid;
+    grid-template-columns: 5fr  1fr;
+}
+
+.bonus-part{
+    border: 2px solid green;
+    margin: 20px 30px;
+    padding: 10px;
+}

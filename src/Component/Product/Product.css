@@ -1,14 +1,15 @@
 .card-picture{
     width: 200px;
-    margin: 0px 40px;
+    margin: 5px 40px;
 }
-.card-info{
-    padding: 5px;
+.card-info h5{
+    padding-left: 10px;
   
 }
 .card{
     position: relative;
-    height: 350px;
+    height: 400px;
+    width: 300px;
 }
 .cart-btn{
     width: 100%;
