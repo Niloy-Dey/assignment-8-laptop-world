@@ -1,5 +1,15 @@
+.full-container{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .product-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    
+}
+.product-container .card{
+    border: 1px solid black;
+    border-radius: 6px;
+    
 }
