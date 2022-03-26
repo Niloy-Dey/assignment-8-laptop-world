@@ -16,7 +16,7 @@
     {
       "id": "62386478a90d983bcce06dad",
       "productNo" :3,
-      "picture": "https://www.techadvisor.com/cmsdata/features/3802135/galaxy_book_flex_review_3_thumb1200_4-3.jpg",
+      "picture": "https://www.gizmochina.com/wp-content/uploads/2019/03/Lenovo-ideapad-720S-Notebook.jpg",
       "price": 34000,
       "name": "samsung probook"
     },
@@ -68,5 +68,19 @@
       "picture": "https://www.ryanscomputers.com/storage/products/medium/asus-vivobook-14-x415ea-intel-core-i5-1135g7-14-11626342162.webp",
       "price": 85000,
       "name": "pro max ultra"
+    },
+    {
+      "id": "62386478f0475f8eb172577b",
+      "productNo" :11,
+      "picture": "https://m.media-amazon.com/images/I/71sesDsw95L._AC_SL1500_.jpg",
+      "price": 55000,
+      "name": "pro max HD "
+    },
+    {
+      "id": "62386478g0675f8eb172577b",
+      "productNo" :12,
+      "picture": "https://p.ipricegroup.com/uploaded_ae503a58d46c7e1d1a4ac676aad46ad2.jpg",
+      "price": 43000,
+      "name": "Acer pad"
     }
 ]

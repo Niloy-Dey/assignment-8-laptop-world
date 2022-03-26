@@ -13,9 +13,6 @@ const Products = (props) => {
         setCart(newCart);
     }
 
-    /* ------------------------------------------
-    choose button onclick event handaler button 
-    ----------------------------------------------- */
 
     const clearData = () => {
         const deleteCart = []
