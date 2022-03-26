@@ -4,7 +4,7 @@ const RandomProduct = (props) => {
 
     return (
         <div>
-            <p style={{fontSize:'20px'}}> <b> {props?.selected[0]?.name} </b> </p>
+            <p style={{fontSize:'20px'}}> <b> {props?.selected.name} </b> </p>
         </div>
     );
 };

@@ -9,26 +9,30 @@ const Products = (props) => {
     const [selectedProduct, setSelectedProduct] = useState([]);
 
     const handleAddToCart = (product) => {
+        setSelectedProduct([])
         const newCart = [...cart, product]
         setCart(newCart);
     }
 
 
     const clearData = () => {
-        const deleteCart = []
-        setCart(deleteCart);
+        // const deleteCart = []
+        setCart([]);
         setSelectedProduct([]);
     }
 
     const selectOne = (cart) => {
-        const random = Math.floor(Math.random() * cart.length) + 1
-        const selectedOne = cart.filter(product => (product.productNo === random));
+        // console.log(cart);
+        const random = Math.floor(Math.random() * cart.length) + 1;
+        // const selectedOne = cart.filter(product => (product.productNo === random));
+        // const selectedOne = cart.filter(product => (product.productNo));
+        const selectedOne = cart[random - 1];
         setSelectedProduct(selectedOne);
-        const clearProduct = []
-        setCart(clearProduct);
+        // const clearProduct = []
+        // setCart(clearProduct);
+        setCart([]);
 
-
-        
+        // console.log(random);
     }
     const products = props.data;
 
@@ -65,7 +69,7 @@ const Products = (props) => {
                 <p>Ans: </p>
                 <h5>How use state work</h5>
                 <p>Ans: State’ is the representation or a snapshot of the app at any one time.
-                    In a declarative UI, developers aren’t in charge the UI when something happens. They don’t have to worry about hproductNoing or showing divs, as you would with a code-heavy imperative UI. We only have to worry about receiving a specific app ‘state or, a specific screen displaying specific information at any one time and rendering it in the UI.</p>
+                In a declarative UI, developers aren’t in charge the UI when something happens. They don’t have to worry about hproductNoing or showing divs, as you would with a code-heavy imperative UI. We only have to worry about receiving a specific app ‘state or, a specific screen displaying specific information at any one time and rendering it in the UI.</p>
 
             </div>
         </div>
