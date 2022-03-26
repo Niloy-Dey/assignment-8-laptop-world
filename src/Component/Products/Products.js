@@ -5,13 +5,6 @@ import RandomProduct from '../RandomProduct/RandomProduct';
 import './Products.css'
 
 const Products = (props) => {
-
-
-    // const handleAddToCart = (product) =>{
-    //     const  newCart = [...cart, product]
-    //     console.log(...cart);
-    //     setCart(newCart);
-    // }
     const [cart, setCart] = useState([])
     const [selectedProduct, setSelectedProduct] = useState([]);
 
@@ -27,22 +20,19 @@ const Products = (props) => {
     const clearData = () => {
         const deleteCart = []
         setCart(deleteCart);
+        setSelectedProduct([]);
     }
 
     const selectOne = (cart) => {
-        // console.log(cart);
-        // const random =Math.round(Math.random()) ;
-        // console.log(cart.length);
         const random = Math.floor(Math.random() * cart.length) + 1
         const selectedOne = cart.filter(product => (product.productNo === random));
         setSelectedProduct(selectedOne);
-        // console.log(selectedOne );
-        // console.log(selectedProduct);
-        // console.log(random);
-    
+        const clearProduct = []
+        setCart(clearProduct);
+
+
+        
     }
-    // console.log(selectedProduct);
-    // console.log(selectedProduct[0]);
     const products = props.data;
 
     return (
@@ -61,8 +51,7 @@ const Products = (props) => {
                       
                     }
                     {
-                        //  selectedProduct.map( item =>)
-                        <RandomProduct slected = {selectedProduct}></RandomProduct>
+                        <RandomProduct selected = {selectedProduct}></RandomProduct>
                                                 
                     }
 
