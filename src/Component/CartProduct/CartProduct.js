@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CartProduct = (props) => {
+    // console.log(props);
     const {name} = props.clickProduct;
     return (
         <div>
