@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
+import CartProduct from '../CartProduct/CartProduct';
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = (props) => {
 
+    
+    // const handleAddToCart = (product) =>{
+    //     const  newCart = [...cart, product]
+    //     console.log(...cart);
+    //     setCart(newCart);
+    // }
     const [cart, setCart] = useState([])
     const handleAddToCart = (product) =>{
-        const  newCart = [...cart, product]
-        setCart(newCart);
+           const  newCart = [...cart, product]
+           setCart(newCart);
     }
 
+/* ------------------------------------------
+choose button onclick event handaler button 
+----------------------------------------------- */    
+    
+    const clearData=() => {
+        const deleteCart = []
+        setCart(deleteCart);
+    }
 
     const products = props.data;
     return (
@@ -18,14 +33,16 @@ const Products = (props) => {
              <div className='full-container'>
                     <div className='product-container'>
                         {
-                        products.map( pd  => <Product product={pd} key={pd.id}> </Product>)
+                        products.map( pd  => <Product product={pd} key={pd.id}  handleAddToCart = {handleAddToCart}> </Product>)
                         }
                     </div>
                     <div className="cart-container">
                         <h4>Selected Clothes</h4>
-                        <p>item {cart.length} </p>
-                        <button className='first-btn'>CHOOSE 1 FOR ME</button> <br /> <br />
-                        <button className='second-btn'>CHOOSE AGAIN</button>
+                        {
+                            cart.map(singleProduct => <CartProduct clickProduct={singleProduct} key={singleProduct.id}></CartProduct>)
+                        }
+                        <button className='first-btn' >CHOOSE 1 FOR ME</button> <br /> <br />
+                        <button className='second-btn' onClick={clearData}>CHOOSE AGAIN</button>
                     </div>
              </div>
 
